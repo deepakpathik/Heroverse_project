@@ -10,4 +10,6 @@ body {
       no-repeat fixed center,
     url("./images/spiderman.jpg") no-repeat fixed center;
   background-size: cover;
+  overscroll-behavior: none;
+  scroll-behavior: smooth;
 }
