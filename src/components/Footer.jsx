@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="developer-info">
           <h3>Developer</h3>
           <div className="developer-details">
-            <p className="name">Deepak Pathik</p>
+            <p className="name">Deepak  Pathik</p>
             <p className="description">
               Passionate about creating beautiful and functional web applications. 
               Specialized in React and modern web technologies.
