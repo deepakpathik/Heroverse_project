@@ -40,11 +40,7 @@ npm run dev
 
 4. Open your browser and visit `http://localhost:5174`
 
-## Environment Variables
 
-You'll need to set up your Marvel API keys:
-- Public Key: `03b39ff478086f21f84ae08becb3751a`
-- Private Key: `db176d7c88ad2d8eee37dde4c78daf5343348a32`
 
 ## Contributing
 
