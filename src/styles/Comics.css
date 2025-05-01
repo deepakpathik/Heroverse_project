@@ -1,0 +1,119 @@
+/* Desktop Styles */
+@media (min-width: 1201px) {
+  .comics {
+    grid-template-columns: repeat(5, 1fr);
+    max-width: 80vw;
+    gap: 20px;
+    padding: 2em;
+  }
+
+  .comicCard {
+    height: 400px;
+  }
+
+  .comicCard .caption {
+    font-size: 1.6em;
+  }
+}
+
+/* Tablet Styles */
+@media (min-width: 769px) and (max-width: 1200px) {
+  .comics {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 90vw;
+    gap: 15px;
+    padding: 1.5em;
+  }
+
+  .comicCard {
+    height: 350px;
+  }
+
+  .comicCard .caption {
+    font-size: 1.4em;
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .comics {
+    grid-template-columns: repeat(1, 1fr);
+    max-width: 95vw;
+    gap: 15px;
+    padding: 1em;
+  }
+
+  .comicCard {
+    height: 300px;
+  }
+
+  .comicCard .caption {
+    font-size: 1.2em;
+    padding: 0.3em 0.8em;
+  }
+
+  .comicCard:hover {
+    transform: translate(-1px, -1px);
+    box-shadow: 3px 3px black;
+  }
+}
+
+/* Common Styles */
+.comics {
+  margin: 0 auto;
+  display: grid;
+  background-color: white;
+  background-image: url(../images/paper.jpg);
+}
+
+.comicCard {
+  border: 2px solid rgb(161, 161, 161);
+  background: rgba(255, 255, 255, 0.67);
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid black;
+  box-shadow: 4px 4px black;
+  filter: grayscale(100);
+  transition: 0.2s linear;
+  text-decoration-color: black;
+  position: relative;
+}
+
+.comicCard .caption {
+  font-family: "Bangers", cursive;
+  text-align: center;
+  margin: auto auto 0 auto;
+  padding: 0.5em 1em;
+  background-color: white;
+  background-image: url(../images/paper.jpg);
+  color: black;
+  border: 1px solid black;
+  box-shadow: 2px 2px black;
+}
+
+.comicCard .caption.bottom {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  color: black;
+  text-decoration: underline;
+  width: 60%;
+}
+
+.comicCard:hover {
+  cursor: pointer;
+  filter: grayscale(0);
+  box-shadow: 6px 6px black;
+  transform: translate(-2px, -2px);
+}
+
+.comicCard:hover .caption {
+  opacity: 0;
+}
+
+.comicCard:hover .bottom {
+  opacity: 1;
+} 

@@ -1,0 +1,161 @@
+/* Desktop Styles */
+@media (min-width: 769px) {
+  .characters-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2em;
+    padding: 2em;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .character-card img {
+    height: 300px;
+  }
+
+  .character-card .character-info {
+    padding: 1.5em;
+  }
+
+  .character-card .character-info h3 {
+    font-size: 1.8em;
+  }
+
+  .character-card .character-info p {
+    font-size: 0.9em;
+  }
+
+  .character-card .character-info .view-comics {
+    font-size: 1.1em;
+    padding: 0.8em;
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .characters-grid {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1em;
+    padding: 1em;
+  }
+
+  .character-card img {
+    height: 220px;
+  }
+
+  .character-card .character-info {
+    padding: 1em;
+  }
+
+  .character-card .character-info h3 {
+    font-size: 1.4em;
+  }
+
+  .character-card .character-info p {
+    font-size: 0.8em;
+    -webkit-line-clamp: 2;
+  }
+
+  .character-card .character-info .view-comics {
+    font-size: 1em;
+    padding: 0.6em;
+  }
+
+  .character-card:hover {
+    transform: translateY(-5px);
+  }
+}
+
+/* Common Styles */
+.characters-grid {
+  display: grid;
+}
+
+.character-card {
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 15px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+.character-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(255, 0, 0, 0.3);
+}
+
+.character-card:hover img {
+  transform: scale(1.1);
+}
+
+.character-card:hover .view-comics {
+  background: linear-gradient(45deg, #ff0000, #ff4444);
+}
+
+.character-card img {
+  width: 100%;
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+
+.character-card .character-info {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7));
+}
+
+.character-card .character-info h3 {
+  font-family: 'Bangers', cursive;
+  margin: 0 0 0.5em;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(255, 0, 0, 0.3);
+}
+
+.character-card .character-info p {
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+  margin: 0 0 1em;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+
+.character-card .character-info .view-comics {
+  width: 100%;
+  border: none;
+  border-radius: 25px;
+  background: linear-gradient(45deg, #333, #666);
+  color: white;
+  font-family: 'Bangers', cursive;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.character-card .character-info .view-comics:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 0, 0, 0.4);
+}
+
+/* Loading Animation */
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+}
+
+.loading::after {
+  content: '';
+  width: 50px;
+  height: 50px;
+  border: 5px solid #fff;
+  border-top-color: #ff0000;
+  border-radius: 50%;
+  animation: loading 1s infinite linear;
+}
+
+@keyframes loading {
+  to {
+    transform: rotate(360deg);
+  }
+} 
